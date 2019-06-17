@@ -3,9 +3,10 @@ version: '3.1'
 
 services:
     
-  docker-mysql:
-    image: mysql:8
-    build: .
+  mysql:
+    build:
+        context: .
+        dockerfile: Dockerfile-mysql
     ports:
       - 3306:3306
     environment:
@@ -15,9 +16,10 @@ services:
       MYSQL_PASSWORD: micropw
 
   microuser:
-    image: openjdk:8
-    build: .
+    build:
+        context: .
+        dockerfile: Dockerfile-app
     ports:
       - 8092:8080
     depends_on:
-      - docker-mysql
+      - mysql

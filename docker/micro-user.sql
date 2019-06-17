@@ -1,4 +1,4 @@
-use USER_DB;
+use user_db;
 
 CREATE TABLE IF NOT EXISTS USER (
     ID INT AUTO_INCREMENT,
