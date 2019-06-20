@@ -1,7 +1,5 @@
 package it.sdeluca.microuser.dto;
 
-import java.io.Serializable;
-
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
@@ -13,9 +11,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public class MicroUser implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class MicroUser {
 	private Integer id;
 	private String lastName;
 	private String name;

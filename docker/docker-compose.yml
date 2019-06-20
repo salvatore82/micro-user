@@ -8,6 +8,8 @@ services:
         dockerfile: Dockerfile-mysql
     ports:
       - 3306:3306
+    networks:
+      - microusernetwork
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: user_db
@@ -18,7 +20,13 @@ services:
     build:
         context: .
         dockerfile: Dockerfile-app
+    networks:
+      - microusernetwork
     ports:
       - 8092:8080
     depends_on:
       - mysql
+      
+networks:
+  microusernetwork:
+    driver: bridge

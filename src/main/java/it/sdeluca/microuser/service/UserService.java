@@ -3,6 +3,8 @@
  */
 package it.sdeluca.microuser.service;
 
+import java.io.IOException;
+
 import it.sdeluca.microuser.dto.MicroUser;
 
 /**
@@ -11,5 +13,5 @@ import it.sdeluca.microuser.dto.MicroUser;
  */
 public interface UserService {
 
-	public MicroUser saveUser(MicroUser microUser);
+	public MicroUser saveUser(MicroUser microUser) throws IOException;
 }

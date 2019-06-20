@@ -1,4 +1,4 @@
-package it.sdeluca.microuser;
+package it.sdeluca.microuser.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
